@@ -7,8 +7,9 @@ let io;
 function initializeSocket(server) {
   io = socketIo(server, {
     cors: {
-      origin: "*",
+      origin: process.env.FRONTEND_URL,
       methods: ["GET", "POST"],
+      credentials: true,
     },
   });
 
@@ -22,25 +23,25 @@ function initializeSocket(server) {
 
       if (Type == "user") {
         await userModel.findByIdAndUpdate(userId, { SocketId: socket.id });
-      }else if(Type=="captain"){
-        await captainModel.findByIdAndUpdate(userId,{SocketId : socket.id})
+      } else if (Type == "captain") {
+        await captainModel.findByIdAndUpdate(userId, { SocketId: socket.id });
       }
     });
 
-    socket.on("update-location-captain",async (data)=>{
-        const {userId,location} =data;
+    socket.on("update-location-captain", async (data) => {
+      const { userId, location } = data;
 
-        if(!location || !location.ltd || !location.lng ){
-            return socket.emit("error",{message : "Invalid location data"})
-        }
+      if (!location || !location.ltd || !location.lng) {
+        return socket.emit("error", { message: "Invalid location data" });
+      }
 
-        await captainModel.findByIdAndUpdate(userId,{
-            location :{
-                ltd : location.ltd,
-                lng : location.lng
-            }
-        })
-    })
+      await captainModel.findByIdAndUpdate(userId, {
+        location: {
+          ltd: location.ltd,
+          lng: location.lng,
+        },
+      });
+    });
 
     socket.on("disconnect", () => {
       console.log(`Client disconnected  : ${socket.id}`);
@@ -48,14 +49,16 @@ function initializeSocket(server) {
   });
 }
 
-function sendMessageToSocketId(socketId,messageObject){
-  console.log(`messgae is sent to : ${socketId}, message ${messageObject.data}`);
+function sendMessageToSocketId(socketId, messageObject) {
+  console.log(
+    `messgae is sent to : ${socketId}, message ${messageObject.data}`
+  );
 
-  if(io){
-    io.to(socketId).emit(messageObject.event,messageObject.data);
-  }else{
+  if (io) {
+    io.to(socketId).emit(messageObject.event, messageObject.data);
+  } else {
     console.log(`${socketId} not found socket id`);
   }
 }
 
-module.exports = { initializeSocket , sendMessageToSocketId};
+module.exports = { initializeSocket, sendMessageToSocketId };
