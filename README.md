@@ -2,10 +2,19 @@
 
 A full-stack taxi booking web application inspired by Uber. This app allows users to search for pickup and destination locations, view fare estimates, select vehicle types, and book rides in real-time with driver status updates.
 
+---
+
 ## 🔗 Live Demo
 
 You can check out the live deployed version of the Taxi Booking App here:  
 👉 [Taxi Booking App Live](https://taxi-booking-app-beta.vercel.app)
+
+---
+
+## 📱 Mobile-Optimized UI
+
+> ⚠️ For best experience, **open this app in mobile view** (responsive design optimized for phones).  
+> You can test it using Chrome DevTools → Toggle Device Toolbar 📱
 
 ---
 
