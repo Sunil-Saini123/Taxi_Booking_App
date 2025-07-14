@@ -4,13 +4,25 @@ A full-stack taxi booking web application inspired by Uber. This app allows user
 
 ## 🔗 Live Demo
 
-> Add your hosted app link here (e.g., `https://taxi-booking-app.vercel.app/`)
+You can check out the live deployed version of the Taxi Booking App here:  
+👉 [Taxi Booking App Live](https://taxi-booking-app-beta.vercel.app)
 
 ---
 
 ## 📸 Screenshots
 
-> Add screenshots or a GIF preview of your app’s UI here
+
+<div align="center">
+
+  <img src="screenshots/start.png" alt="Start Page" width="200"/>
+  <img src="screenshots/userlogin.png" alt="User Login" width="200"/>
+  <img src="screenshots/userhome.png" alt="User Home" width="200"/>
+  <img src="screenshots/captainlogin.png" alt="Captain Login" width="200"/>
+  <img src="screenshots/captainhome.png" alt="Captain Home" width="200"/>
+    <img src="screenshots/userride.png" alt="User Ride" width="200"/>
+  <img src="screenshots/captainride.png" alt="Captain Ride" width="200"/>
+
+</div>
 
 ---
 
