@@ -103,15 +103,15 @@ module.exports.getDistanceAndTime = async (origin, destination, mode = "driving-
   };
 };
 
-module.exports.getCaptainInRadius = async (ltd,lng,radius)=>{
-
+module.exports.getCaptainInRadius = async (ltd, lng, radius, vehicleType) => {
   const captains = await captainModel.find({
-    location :{
-      $geoWithin : {
-        $centerSphere : [[ltd,lng],radius/6371]
-      }
-    }
-  })
+    location: {
+      $geoWithin: {
+        $centerSphere: [[ltd, lng], radius / 6371], // radius in radians
+      },
+    },
+    "vehicle.type": vehicleType, // filter by type: "auto", "moto", "taxi"
+  });
 
   return captains;
-}
+};

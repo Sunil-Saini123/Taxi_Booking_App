@@ -32,7 +32,7 @@ const UserSignup = () => {
             setuser(data.user);
             localStorage.setItem('usertoken',data.token);
             localStorage.setItem('role','user');
-            navigate('/home');
+            navigate('/login');
         }
 
         setemail('');

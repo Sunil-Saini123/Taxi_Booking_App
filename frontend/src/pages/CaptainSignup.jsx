@@ -45,7 +45,7 @@ const CaptainSignup = () => {
       localStorage.setItem("captaintoken", data.token);
       localStorage.setItem('role','captain');
       // localStorage.setItem('captain',JSON.stringify(data.captain));
-      navigate("/captain-home");
+      navigate("/captain-login");
     }
 
     setemail("");
