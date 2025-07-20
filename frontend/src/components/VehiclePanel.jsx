@@ -11,7 +11,7 @@ export default function VehiclePanel({
   return (
     <>
       <div className="flex justify-between items-center">
-        <h4 className="text-3xl font-semibold">Chosse a Vehicle</h4>
+        <h4 className="text-3xl font-semibold">Choose a Vehicle</h4>
         <FaAngleDown
           className="text-2xl"
           onClick={() => {

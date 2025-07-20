@@ -66,7 +66,7 @@ export default function StartRidePopup({
               ride?.user?.fullname?.lastname}
           </h4>
         </div>
-        <p className="text-xl font-bold text-gray-800">2 KM</p>
+        <p className="text-xl font-bold text-gray-800">{ride?.distance} KM</p>
       </div>
       {/* Ride Details */}
       <div className="space-y-4">

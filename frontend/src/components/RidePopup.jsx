@@ -19,7 +19,7 @@ export default function RidePopup({setRidePopup,ride,confirmRide}) {
           />
           <h4 className="text-lg font-semibold text-gray-800">{ride?.user?.fullname?.firstname + " " + ride?.user?.fullname?.lastname}</h4>
         </div>
-        <p className="text-xl font-bold text-gray-800">2 KM</p>
+        <p className="text-xl font-bold text-gray-800">{ride?.distance} KM</p>
       </div>
 
       <div className="space-y-4">
