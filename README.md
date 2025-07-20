@@ -28,7 +28,7 @@ You can check out the live deployed version of the Taxi Booking App here:
   <img src="screenshots/userhome.png" alt="User Home" width="200"/>
   <img src="screenshots/captainlogin.png" alt="Captain Login" width="200"/>
   <img src="screenshots/captainhome.png" alt="Captain Home" width="200"/>
-    <img src="screenshots/userride.png" alt="User Ride" width="200"/>
+  <img src="screenshots/user_ride.png" alt="User Ride" width="200"/>
   <img src="screenshots/captainride.png" alt="Captain Ride" width="200"/>
 
 </div>
